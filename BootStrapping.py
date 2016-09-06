@@ -88,9 +88,12 @@ if __name__ == "__main__":
     y = yield_curve.get_zero_rates()
     x = yield_curve.get_maturities()
 
-    import matplotlib.pyplot as plt
-    plt.plot(x, y)
-    plt.title("Zero Curve")
-    plt.ylabel("Zero Rate (%)")
-    plt.xlabel("Maturity in Years")
-    plt.show()
+    print(x)
+    print(y)
+
+    # import matplotlib.pyplot as plt
+    # plt.plot(x, y)
+    # plt.title("Zero Curve")
+    # plt.ylabel("Zero Rate (%)")
+    # plt.xlabel("Maturity in Years")
+    # plt.show()
