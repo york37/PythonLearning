@@ -7,6 +7,7 @@ Output: zero curve
 
 import math
 from datetime import date
+import collections
 
 class BootstrapZeroCurve(object):
 
@@ -17,10 +18,11 @@ class BootstrapZeroCurve(object):
     def add_instrument(self, T, rate, zero_conpon):
         self.instruments[T] = (rate, zero_conpon)
 
-    def add_zero(self, T, rate, dcf):
-        self.zero_curve[T] = (rate, dcf)
+    def add_zero(self, T, rate):
+        self.zero_curve[T] = (rate)
 
-
+    def bootstrapping():
+        for T in self.instruments
 
 
 
@@ -44,14 +46,15 @@ if __name__ == "__main__":
     zero_curve.add_instrument(date(2022,9,2), 1.0372, False)
     zero_curve.add_instrument(date(2023,9,2), 1.0888, False)
 
-
-
     print("creating zero curve ...")
+    zero_curve.bootstrapping()
 
 
 
     print("testing ...")
-    for T in zero_curve.instruments.keys():
+    od = collections.OrderedDict(sorted(zero_curve.instruments.items()))
+
+    for T in od.keys():
         if(zero_curve.instruments[T][1]):
             print((T - valuation_date).days/365," - True - ",zero_curve.instruments[T])
         else:
