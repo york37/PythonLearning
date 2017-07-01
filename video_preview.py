@@ -30,7 +30,6 @@ for file_name in file_list:
     out = cv2.VideoWriter(output_file ,fourcc, fps, (int(width*0.25),int(height*0.25)), True)
 
     counter = 0
-    cap_counter = 0
     segment_count = 10
 
     # calculate frame position at every 1/10 of video length

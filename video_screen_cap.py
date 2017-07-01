@@ -4,8 +4,8 @@ import sys
 from PIL import Image
 
 # define video directory
-d = "D:/Work Related/A4"
-o = "C:/Users/yuego/Downloads/JAV_"
+d = "D:/Work Related/A3"
+o = "C:/Users/yuego/Downloads/Screen_Caps"
 
 file_list = os.listdir(d)
 
